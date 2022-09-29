@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Cricket from './Components/Cricket/Cricket';
+import Calculate from './Components/Calculate/Calculate';
 
 function App() {
   return (
-    <div className="App">
-      <h1>this is my app</h1>
+    <div className='main'>
+      <Cricket></Cricket>
+      <Calculate></Calculate>
     </div>
   );
 }
