@@ -1,13 +1,12 @@
 
 import './App.css';
-import Cricket from './Components/Cricket/Cricket';
-import Calculate from './Components/Calculate/Calculate';
+import Club from './Component/Club/Club';
+
 
 function App() {
   return (
-    <div className='main'>
-      <Cricket></Cricket>
-      <Calculate></Calculate>
+    <div>
+      <Club></Club>
     </div>
   );
 }

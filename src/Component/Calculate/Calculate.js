@@ -1,9 +1,27 @@
 import React from 'react';
-import "./Break.css"
+import './Calculate.css'
 
-const Break = () => {
+const Calculate = () => {
     return (
-        <div>
+        <div className='calculate-cart'>
+            <h2>Shakil Ahmed</h2>
+            <p><small>Chittagong, Bangladesh</small></p>
+            <div className="my-info">
+            <div>
+                <p>65kg</p>
+                <p><small>weight</small></p>
+            </div>
+            <div>
+                <p>6.9</p>
+                <p><small>Height</small></p>
+            </div>
+            <div>
+                <p>32Yrs</p>
+                <p><small>Age</small></p>
+            </div>
+            </div>
+            
+            <div>
             <h3>Add A Break</h3>
             <div className='break-details'>
             <p className='breaks'>10m</p>
@@ -22,7 +40,9 @@ const Break = () => {
                 Activity Completed
             </button>
         </div>
+
+        </div>
     );
 };
 
-export default Break;
+export default Calculate;
