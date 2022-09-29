@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Cricket from './Components/Cricket/Cricket';
 import Calculate from './Components/Calculate/Calculate';

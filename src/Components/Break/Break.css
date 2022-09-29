@@ -1,0 +1,30 @@
+.break-details{
+    display: flex;
+    justify-content: space-between;
+}
+.breaks{
+    background-color: lightblue;
+    padding: 6px;
+    border-radius: 5px;
+}
+.exercise-container{
+    background-color: lightblue;
+    padding: 10px 5px;
+    border-radius: 5px;
+
+}
+.exercise-details{
+    margin-left: 50px;
+}
+.btn-complete{
+    color: rgb(20, 88, 99);
+    background-color: rgb(130, 201, 225);
+    width: 100%;
+    padding: 8px 0;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.btn-complete:hover{
+    background-color: rgb(22, 168, 217);
+}

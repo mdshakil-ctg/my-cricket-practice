@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
+import "./Exercises.css"
 
 const Exercises = () => {
+    const [carts, setCarts] = useState([]);
+    useEffect(()=>{
+        fetch('fakedb.json')
+        .then(res => res.json())
+        .then(data => setCarts(data))
+    },[])
     return (
-        <div>
-            <h4>this is exersises</h4>
-            <img src="https://cdn.shopify.com/s/files/1/0756/1735/products/3385_1_grande.jpg?v=1488444729" alt="" />    
+        <div className='cart-container'>
+            
+            {
+                carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
+            }
         </div>
     );
 };
