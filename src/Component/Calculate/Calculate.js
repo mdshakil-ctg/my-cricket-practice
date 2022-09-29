@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import { addToLocalStorage } from '../../utilities/fakedb';
+import React, { useEffect, useState } from 'react';
+import { addToLocalStorage, getStoreData } from '../../utilities/fakedb';
 import './Calculate.css'
 
 const Calculate = (props) => {
     const [breakTime, SetBreakTime] = useState(0);
-    console.log(props.duration)
+    
+    useEffect(()=>{
+        const storeData = getStoreData();
+        SetBreakTime(storeData.props);
+    },[])
     const addBreakTime = (time)=>{
         SetBreakTime(time);
         addToLocalStorage(time);

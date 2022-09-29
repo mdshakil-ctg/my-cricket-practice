@@ -26,8 +26,9 @@ const getStoreData = () =>{
     let data = {};
     const storeData = localStorage.getItem('Data');
     if(storeData){
-        data = JSON.parse(storeData)
+        data = JSON.parse(storeData);
     }
+    
     return data;
 }
 
