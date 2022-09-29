@@ -25,6 +25,10 @@
     background-color: lightblue;
     padding: 6px;
     border-radius: 5px;
+    border: 1px solid lightcyan;
+}
+.breaks:hover{
+    background-color: rgb(45, 175, 218);
 }
 .exercise-container{
     background-color: lightblue;

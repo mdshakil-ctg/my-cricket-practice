@@ -5,11 +5,17 @@ import './Club.css'
 
 const Club = () => {
     const [carts, setCarts] = useState([]);
+    const [duration, setDuration] = useState(0);
     useEffect(()=>{
         fetch('fakedb.json')
         .then(res => res.json())
         .then(data => setCarts(data))
     },[])
+    const addToCart = (input) =>{
+        console.log(duration)
+        const newDuration = duration + input;
+        setDuration(newDuration);
+    }
     return (
         <div>
             <div className='cart-header'>
@@ -19,11 +25,11 @@ const Club = () => {
             <div className='main-container'>
             <div className='cart-container'>
             {
-                carts.map(cart => <Cart key={cart.id} cart={cart}></Cart>)
+                carts.map(cart => <Cart key={cart.id} cart={cart} addToCart={addToCart} ></Cart>)
             }
             </div>
             <div className='calculate'>
-            <Calculate></Calculate>
+            <Calculate duration={duration}></Calculate>
             </div>
             </div>
         </div>
