@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToLocalStorage } from '../../utilities/fakedb';
 import Calculate from '../Calculate/Calculate';
 import Cart from '../Cart/Cart';
 import './Club.css'
@@ -12,7 +13,6 @@ const Club = () => {
         .then(data => setCarts(data))
     },[])
     const addToCart = (input) =>{
-        console.log(duration)
         const newDuration = duration + input;
         setDuration(newDuration);
     }

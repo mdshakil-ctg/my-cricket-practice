@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { addToLocalStorage } from '../../utilities/fakedb';
 import './Calculate.css'
 
 const Calculate = (props) => {
@@ -6,6 +7,7 @@ const Calculate = (props) => {
     console.log(props.duration)
     const addBreakTime = (time)=>{
         SetBreakTime(time);
+        addToLocalStorage(time);
     }
     return (
         <div className='calculate-cart'>
