@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { addToLocalStorage, getStoreData } from '../../utilities/fakedb';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Calculate.css'
 
 const Calculate = (props) => {
@@ -13,8 +15,12 @@ const Calculate = (props) => {
         SetBreakTime(time);
         addToLocalStorage(time);
     }
+    const diffToast = () =>{
+        toast("Your Activity Completed");
+    }
     return (
-        <div className='calculate-cart'>
+            <>
+                <div className='calculate-cart'>
             <h2>Shakil Ahmed</h2>
             <p><small>Chittagong, Bangladesh</small></p>
             <div className="my-info">
@@ -47,12 +53,14 @@ const Calculate = (props) => {
                     <h5 className='exercise-container'>Break time <span className='exercise-details'>{breakTime}m</span></h5>
                 </div>
             </div>
-            <button className='btn-complete'>
+            <button onClick={diffToast} className='btn-complete'>
                 Activity Completed
             </button>
-        </div>
+            </div>
 
         </div>
+        <ToastContainer />
+            </>
     );
 };
 
