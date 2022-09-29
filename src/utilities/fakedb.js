@@ -22,7 +22,16 @@ const addToLocalStorage = props =>{
     localStorage.setItem('Data', JSON.stringify(data));
     
 }
+const getStoreData = () =>{
+    let data = {};
+    const storeData = localStorage.getItem('Data');
+    if(storeData){
+        data = JSON.parse(storeData)
+    }
+    return data;
+}
 
 export{
-    addToLocalStorage
+    addToLocalStorage,
+    getStoreData
 }
